@@ -1,7 +1,10 @@
 plugins {
 	kotlin("jvm") version "1.9.24"
 	kotlin("plugin.spring") version "1.9.24"
-	id("org.springframework.boot") version "3.3.2"
+	kotlin("plugin.jpa") version  "1.6.21" apply false
+
+//	id("org.springframework.boot") version "3.3.2" -> 메인 클래스가 없어서 예외 발생
+	id("org.springframework.boot") version "3.3.2" apply false
 	id("io.spring.dependency-management") version "1.1.6"
 }
 
@@ -35,6 +38,7 @@ subprojects {
 	apply(plugin = "io.spring.dependency-management")
 
 	dependencies {
+		implementation("org.springframework.boot:spring-boot-starter")
 		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 		implementation("org.jetbrains.kotlin:kotlin-reflect")
 		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")

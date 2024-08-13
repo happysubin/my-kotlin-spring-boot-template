@@ -1,7 +1,7 @@
 rootProject.name = "my-kotlin-spring-template"
 
 include(
-    "core:",
+    "core",
     "common",
     "application:api",
     "application:batch",
