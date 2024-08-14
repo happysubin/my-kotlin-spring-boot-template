@@ -1,9 +1,8 @@
+
 plugins {
 	kotlin("jvm") version "1.9.24"
 	kotlin("plugin.spring") version "1.9.24"
 	kotlin("plugin.jpa") version  "1.6.21" apply false
-
-//	id("org.springframework.boot") version "3.3.2" -> 메인 클래스가 없어서 예외 발생
 	id("org.springframework.boot") version "3.3.2" apply false
 	id("io.spring.dependency-management") version "1.1.6"
 }
@@ -11,11 +10,9 @@ plugins {
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
-
-
 
 allprojects {
 
@@ -27,6 +24,10 @@ allprojects {
 	}
 }
 
+//springBoot {
+//	mainClass.set("template.api.ApiApplication")
+//	mainClass.set("template.batch.BatchApplication")
+//}
 
 subprojects {
 
