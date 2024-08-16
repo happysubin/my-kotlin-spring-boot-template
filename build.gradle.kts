@@ -1,40 +1,35 @@
 
 plugins {
-	kotlin("jvm") version "1.9.24"
-	kotlin("plugin.spring") version "1.9.24"
-	kotlin("plugin.jpa") version  "1.6.21" apply false
-	id("org.springframework.boot") version "3.3.2" apply false
-	id("io.spring.dependency-management") version "1.1.6"
+	kotlin("jvm")
+	kotlin("plugin.spring") apply false
+	kotlin("plugin.jpa") apply false
+	id("org.springframework.boot") apply false
+	id("io.spring.dependency-management") apply false
 }
 
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of("${property("javaVersion")}")
 	}
 }
 
 allprojects {
 
-	group = "template"
-	version = "0.0.1-SNAPSHOT"
+	group = "${property("projectGroup")}"
+	version = "${property("applicationVersion")}"
 
 	repositories {
 		mavenCentral()
 	}
 }
 
-//springBoot {
-//	mainClass.set("template.api.ApiApplication")
-//	mainClass.set("template.batch.BatchApplication")
-//}
-
 subprojects {
 
 	apply(plugin = "org.jetbrains.kotlin.jvm")
 	apply(plugin = "org.jetbrains.kotlin.kapt")
 	apply(plugin = "org.jetbrains.kotlin.plugin.spring")
-//	apply(plugin = "org.jetbrains.kotlin.plugin.jpa")
+	apply(plugin = "org.jetbrains.kotlin.plugin.jpa")
 	apply(plugin = "org.springframework.boot")
 	apply(plugin = "io.spring.dependency-management")
 
