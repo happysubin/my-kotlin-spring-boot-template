@@ -1,5 +1,5 @@
 
-# My-Kotlin-Spring-Template
+# My-Kotlin-Spring-Boot-Template
 
 아래 자료를 참고했습니다.
 
