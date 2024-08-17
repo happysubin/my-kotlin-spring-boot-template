@@ -9,7 +9,7 @@ tasks.getByName("jar") {
 dependencies {
 
     implementation(project(":core"))
-    implementation(project(":support"))
+    implementation(project(":support:logging"))
     implementation(project(":infra"))
     implementation(project(":client"))
 
