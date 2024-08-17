@@ -4,6 +4,10 @@ spring:
   profiles:
     active: local
 
+  config:
+    import:
+      - logging.yml
+
 ---
 spring:
   config:
