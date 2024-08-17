@@ -1,11 +1,11 @@
-package template.common
+package template.support
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class CommonApplication
+class SupportApplication
 
 fun main(args: Array<String>) {
-	runApplication<CommonApplication>(*args)
+    runApplication<SupportApplication>(*args)
 }

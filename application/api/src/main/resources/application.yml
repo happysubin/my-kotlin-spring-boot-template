@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: api
+  profiles:
+    active: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: staging
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
