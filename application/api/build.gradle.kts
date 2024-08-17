@@ -10,7 +10,7 @@ dependencies {
 
     implementation(project(":core"))
     implementation(project(":support:logging"))
-    implementation(project(":infra"))
+    implementation(project(":infra:db-core"))
     implementation(project(":client"))
 
     implementation("org.springframework.boot:spring-boot-starter-security")

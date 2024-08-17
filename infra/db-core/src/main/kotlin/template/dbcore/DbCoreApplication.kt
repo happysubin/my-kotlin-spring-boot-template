@@ -1,11 +1,11 @@
-package template.infra
+package template.dbcore
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class InfraApplication
+class DbCoreApplication
 
 fun main(args: Array<String>) {
-	runApplication<InfraApplication>(*args)
+    runApplication<DbCoreApplication>(*args)
 }

@@ -1,12 +1,12 @@
-package template.api
+package template.dbcore
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 //@SpringBootTest
-class ApiApplicationTests {
+class DbCoreApplicationTests {
 
-//    @Test
+    @Test
     fun contextLoads() {
     }
 
