@@ -5,6 +5,7 @@ include(
     "application:api",
     "application:batch",
     "support:logging",
+    "support:monitoring",
     "infra:db-core",
     "client"
 )
