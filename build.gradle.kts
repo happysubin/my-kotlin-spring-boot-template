@@ -1,10 +1,12 @@
 
 plugins {
 	kotlin("jvm")
+	kotlin("kapt")
 	kotlin("plugin.spring") apply false
 	kotlin("plugin.jpa") apply false
 	id("org.springframework.boot") apply false
 	id("io.spring.dependency-management") apply false
+	id("org.jlleitschuh.gradle.ktlint") apply false
 }
 
 
@@ -41,6 +43,7 @@ subprojects {
 		testImplementation("org.springframework.boot:spring-boot-starter-test")
 		testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 		testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+		apply(plugin = "org.jlleitschuh.gradle.ktlint")
 	}
 
 	tasks.getByName("bootJar") {

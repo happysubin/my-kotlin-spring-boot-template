@@ -1,4 +1,3 @@
 package template.core
 
-class Domain {
-}
+class Domain
